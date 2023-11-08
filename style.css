@@ -1,0 +1,159 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: sans-serif;
+  --dark-blue: #073b4c;
+  --light-blue: #118ab2;
+  --green: #06d6a0;
+  --yellow: #f5ab00;
+  --pink: #ef476f;
+}
+
+body {
+  margin: 1rem;
+  font-family: monospace;
+  background-color: var(--green);
+  min-height: 100%;
+}
+
+.header {
+  text-align: center;
+  background-color: var(--pink);
+  padding: 3rem 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.header_title {
+  margin: 0;
+  text-shadow: 2px 2px var(--light-blue), 4px 4px var(--yellow);
+}
+
+.main {
+  padding: 1rem;
+  max-width: 35ch;
+  margin: 0 auto;
+}
+
+.main > * + * {
+  margin-top: 2.5rem;
+}
+
+.radio-container,
+.todo-container {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button {
+  all: unset;
+  display: block;
+  word-break: keep-all;
+  word-wrap: normal;
+  color: white;
+  background-color: var(--light-blue);
+  padding: 0.25em 0.4em;
+  border-radius: 0.3em;
+  border: 0.1em solid transparent;
+  box-shadow: 3px 3px 0px var(--pink);
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 10rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+.add-btn {
+  background-color: var(--light-blue);
+  border: 0.1em solid transparent;
+  box-shadow: 3px 3px 0px var(--pink);
+  border-radius: 0.3em;
+  padding: 0.25em 0.4em;
+}
+
+label,
+.todo-container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 15px;
+}
+
+.todo-container input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+input:focus,
+button:focus,
+input[type="radio"]:focus {
+  outline: 2px solid orange;
+}
+
+/*///////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 425px) {
+
+  .main {
+    padding: 0.5rem; 
+    height: 696px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .header_title {
+    font-size: 1.5rem;
+  }
+
+  .radio-container,
+  .todo-container {
+    padding: 0.5rem 0; 
+  }
+
+  .input {
+    height: 2.5rem;  
+    margin-right: 2rem;
+  }
+
+  .todo-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .todo-container .new-todo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .todos {
+    padding: 0.3rem; 
+  }
+}
+
+

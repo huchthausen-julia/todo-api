@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo API with fetch</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header_title">Todo App</h1>
+    </header>
+    <main class="main">
+        <section class="filter-and-options">
+            <h2>Filter & Options</h2>
+            <div class="radio-container">
+                <label for="all">
+                    <input type="radio" id="all" name="radio-group" value="all" checked>
+                    All
+                </label>
+                <label for="open">
+                    <input type="radio" id="open" name="radio-group" value="open">
+                    Open
+                </label>
+                <label for="done">
+                    <input type="radio" id="done" name="radio-group" value="done">
+                    Done
+                </label>
+            </div>
+            <button class="remove-btn">Remove done Todos</button>
+        </section>
+        <section class="todo-input">
+            <input type="text" class="input" placeholder="new ToDo input">
+            <button class="add-btn">Add</button>
+        </section>
+        <section class="todos">
+            <h2>Your Todos</h2>
+            <ul class="todo-container"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
